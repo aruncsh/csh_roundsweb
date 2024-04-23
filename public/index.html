@@ -10,14 +10,15 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Include Ionicons -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/ionicons/ionicons.min.js"></script>
+    <!-- Include Ionicons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/ionicons/ionicons.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    
+<link rel="stylesheet" href="index.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body onload="showFirstFour()">
     <div class="relative bg-gradient-to-b from-blue-50 to-blue-100">
         <!-- <header class="sticky">
           
@@ -73,40 +74,50 @@
 
         </header> -->
 
-        <header class="p-3 shadow-xl lg:flex lg:items-center lg:justify-between top-0 w-full z-50 sticky lg:px-22" style="background-image: url('https://img.freepik.com/free-vector/medical-health-care-modern-banner-bio-tech-research_1017-45510.jpg?t=st=1713612397~exp=1713615997~hmac=5d859f2e86b804f8793079cbfeca17068c7056316eb489ea8c197f31b60267b8&w=1380');background-size: cover; background-position: center;">
+        <header class="p-3 shadow-xl lg:flex lg:items-center lg:justify-between top-0 w-full z-50 sticky lg:px-22"
+            style="background-image: url('https://img.freepik.com/free-vector/medical-health-care-modern-banner-bio-tech-research_1017-45510.jpg?t=st=1713612397~exp=1713615997~hmac=5d859f2e86b804f8793079cbfeca17068c7056316eb489ea8c197f31b60267b8&w=1380');background-size: cover; background-position: center;">
             <div class="flex justify-between items-center">
-              <div class="flex-shrink-0">
-                <a href="#" title="" class="flex">
-                  <img class="w-full h-8 lg:h-14" src="https://cureselecthealthcare.com/assets/images/cureselect-llp-logo-413x182.jpg" alt="" />
-                </a>
-              </div>
-              <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
-                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-              </span>
+                <div class="flex-shrink-0">
+                    <a href="#" title="" class="flex">
+                        <img class="w-full h-8 lg:h-14"
+                            src="https://cureselecthealthcare.com/assets/images/cureselect-llp-logo-413x182.jpg"
+                            alt="" />
+                    </a>
+                </div>
+                <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
             </div>
-            <ul class="lg:flex lg:items-center z-[1] lg:z-auto lg:static absolute w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 bg-gradient-to-l from-blue-300 to-blue-400 bg-opacity-300 lg:bg-transparent lg:bg-none lg:bg-opacity-0">
-              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
-                <a href="#home" class="text-base font-medium text-black" onclick="scrollToSection('#home')">Home</a>
-              </li>
-              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
-                <a href="#features" class="text-base font-medium text-black" onclick="scrollToSection('#features')">Features</a>
-              </li>
-              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
-                <a href="usermanual.html" class="text-base font-medium text-black" onclick="scrollToSection('#pregnant-mothers')">User Manual</a>
-              </li>
-              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
-                <a href="#our-team" class="text-base font-medium text-black" onclick="scrollToSection('#nurses-doctors')">Our Team</a>
-              </li>
-              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
-                <a href="#contact-us" class="text-base font-medium text-black" onclick="scrollToSection('#blog')">Contact Us</a>
-              </li>
-              <li class="my-4 lg:my-0">
-                <a href="#get-our-app" class="inline-block">
-                  <button class="items-center justify-center px-6 py-3 text-base font-semibold text-black transition-all duration-200 bg-yellow-400 border border-transparent rounded-full lg:inline-flex hover:bg-yellow-500 focus:bg-yellow-500" role="button" onclick="scrollToContact()">Get Our App</button>
-                </a>
-              </li>
+            <ul
+                class="lg:flex lg:items-center z-[1] lg:z-auto lg:static absolute w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 bg-gradient-to-l from-blue-300 to-blue-400 bg-opacity-300 lg:bg-transparent lg:bg-none lg:bg-opacity-0">
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="#home" class="text-base font-medium text-black" onclick="scrollToSection('#home')">Home</a>
+                </li>
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="#features" class="text-base font-medium text-black"
+                        onclick="scrollToSection('#features')">Features</a>
+                </li>
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="usermanual.html" class="text-base font-medium text-black"
+                        onclick="scrollToSection('#pregnant-mothers')">User Manual</a>
+                </li>
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="#our-team" class="text-base font-medium text-black"
+                        onclick="scrollToSection('#nurses-doctors')">Our Team</a>
+                </li>
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="#contact-us" class="text-base font-medium text-black"
+                        onclick="scrollToSection('#blog')">Contact Us</a>
+                </li>
+                <li class="my-4 lg:my-0">
+                    <a href="#get-our-app" class="inline-block">
+                        <button
+                            class="items-center justify-center px-6 py-3 text-base font-semibold text-black transition-all duration-200 bg-yellow-400 border border-transparent rounded-full lg:inline-flex hover:bg-yellow-500 focus:bg-yellow-500"
+                            role="button" onclick="scrollToContact()">Get Our App</button>
+                    </a>
+                </li>
             </ul>
-          </header>
+        </header>
 
         <div class="bg-gradient-to-b from-blue-50 to-blue-200">
 
@@ -159,17 +170,29 @@
                 </div>
                 <div class="container block md:hidden px-4 mt-4 font-semibold md:font-bold mx-auto">
                     <ul class=" grid grid-cols-1 gap-3 ">
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img src="img/feature/patient (1).png" class="h-10 p-1">Create patient admission</li>
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img src="img/feature/hospital-facility.png" class="h-10 p-1"> Choose Facility</li>
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img src="img/feature/cryptocurrency_4089405.png" class="h-10 p-1"> Map CPT codes to encounter ICD codes</li>
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2">    <img src="img/feature/medical-report (1).png" class="h-10 p-1"> Add encounters</li>
-                        
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2">  <img src="img/feature/ticket_15308252.png" class="h-10 p-1"> Save and add multiple codes</li>
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2">  <img src="img/feature/bookmark_15196203.png" class="h-10 p-1">  Save your favorite codes for quick access</li>
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2">  <img src="img/feature/discharge.png" class="h-10 p-1"> Discharge patients</li>
-                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2">  <img src="img/feature/invoice.png" class="h-10 p-1"> All CPT codes are ported to billing software automatically.</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/patient (1).png" class="h-10 p-1">Create patient admission</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/hospital-facility.png" class="h-10 p-1"> Choose Facility</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/cryptocurrency_4089405.png" class="h-10 p-1"> Map CPT codes to
+                            encounter ICD codes</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/medical-report (1).png" class="h-10 p-1"> Add encounters</li>
+
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/ticket_15308252.png" class="h-10 p-1"> Save and add multiple codes</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/bookmark_15196203.png" class="h-10 p-1"> Save your favorite codes for
+                            quick access</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/discharge.png" class="h-10 p-1"> Discharge patients</li>
+                        <li class="bg-white rounded-md px-1 flex gap-2 rounded-md border-2"> <img
+                                src="img/feature/invoice.png" class="h-10 p-1"> All CPT codes are ported to billing
+                            software automatically.</li>
                     </ul>
                 </div>
+<<<<<<< HEAD
                 <div class="container hidden md:block flex md:grid md:grid-cols-4 lg:grid-cols-4 gap-4  mx-auto py-10 px-4">
                     
                     <div class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden group hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
@@ -210,12 +233,129 @@
                     <div class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden group hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
                         <img src="img/feature/invoice.png" class="h-20 p-4 ">
                         <h3 class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out group-hover:opacity-100">All CPT codes are ported to billing software automatically.</h3>
+=======
+                <div
+                    class="container hidden md:block flex md:grid md:grid-cols-4 lg:grid-cols-4 gap-4  mx-auto py-10 px-4">
+
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden group hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/patient (1).png" class="h-20 mx-auto p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out group-hover:opacity-100">
+                            Create patient admission</h3>
                     </div>
-                       
+
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+
+                        <img src="img/feature/hospital-facility.png" class="h-20 mx-auto p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            Choose Facility </h3>
+                    </div>
+
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/medical-report (1).png" class="h-20 mx-auto p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            Add encounters</h3>
+                    </div>
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/cryptocurrency_4089405.png" class="h-20 mx-auto p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            Map CPT codes to encounter ICD codes</h3>
+                    </div>
+
+
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/ticket_15308252.png" class="h-20 mx-auto p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            Save and add multiple codes
+                        </h3>
+                    </div>
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/favorite.png" class="h-20 p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            Save your favorite codes for quick access</h3>
+                    </div>
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/discharge.png" class="h-20 mx-auto p-4">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            Discharge patients
+                        </h3>
+                    </div>
+                    <div
+                        class="container bg-white rounded-full w-30 h-24 flex flex-col justify-center items-center md:overflow-hidden hover:bg-gray-100 hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out relative">
+                        <img src="img/feature/invoice.png" class="h-20 p-4 ">
+                        <h3
+                            class="lg:font-bold text-center text-sm lg:px-6 opacity-0 absolute bottom-0 left-0 right-0 bg-white py-2 px-4 text-blue-400 transition duration-300 ease-in-out hover:opacity-100">
+                            All CPT codes are ported to billing software automatically.</h3>
+>>>>>>> f4b751a (24 end)
+                    </div>
+
                 </div>
-                
+
             </section>
-        
+
+            <section class="py-10 bg-gradient-to-r sm:py-16 lg:py-20">
+                <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                    <div class="flex justify-center">
+                        <button onclick="showFirstFour()" class="px-4 py-2 mr-4 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full hover:text-white hover:bg-blue-600 focus:bg-yellow-400">For Android</button>
+                        <button onclick="showAll()" class="px-4 py-2 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full hover:text-white hover:bg-blue-600 focus:bg-yellow-400">For Apple</button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-6 mt-8 sm:mt-12 xl:mt-20 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-14" id="imageGrid">
+                        <!-- Images -->
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://play-lh.googleusercontent.com/0eIS8Zl6dllcvEs4RFB4qfIdl-WA7iHUYnP7bRsH9i3pWOvDLiuqC50VUUSBEjFH4Q=w526-h296-rw" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://play-lh.googleusercontent.com/Ztnzza5wL1fgnAZKE6U9jk0KfQ12jlIOpqjUhWjKvnxabHXQItUgx5efnOds9LH9NnA=w526-h296-rw" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://play-lh.googleusercontent.com/KB7_wE7CSvkldkXK62A-Gek98EOSFp6wEZp6R56QxftE7WAnhlfL67ZUtziWrYftOFw=w526-h296-rw" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://play-lh.googleusercontent.com/FFPgdy1TrS85SZpHivWtbaxA7BoF1bV2q6tA4Nyy3oYfVh3cl-BIAsbESAms0BgKtOk=w526-h296-rw" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-4">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/f7/af/f7/f7aff70e-e53c-41a3-b2be-b4292d22e1f1/894242f1-311c-478d-b29e-beb5a2be3941_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2023-08-28_at_13.57.06.png/434x0w.webp" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/03/04/7b/03047b1e-42aa-3cc3-1f75-9be0e4ebac3a/68f930e4-d2ce-44b3-aee0-2223ed0ef5c6_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2023-08-28_at_13.57.33.png/434x0w.webp" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/4b/be/2d/4bbe2dc5-d56e-1f48-7fe4-4236e2fc87cd/8f0a768e-b19e-4d70-8301-4cdf6401172d_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2023-08-28_at_13.57.40.png/434x0w.webp" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/fa/b9/b9/fab9b93c-91a6-1958-e667-5818650acbeb/23e329e5-1113-4d61-8735-86d61ae62801_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2023-08-28_at_13.57.49.png/434x0w.webp" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/18/e0/fd/18e0fddf-767d-9760-fab4-a8dbcc0f96ac/4e88ed0f-c648-40e9-8ae1-5d3c49da11f5_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2023-08-28_at_13.57.53.png/434x0w.webp" alt="" onclick="openModal(this.src)" />
+                        </div>
+                        <div class="py-8 px-2">
+                            <img class="relative w-full max-w-full h-full max-h-full mx-auto mb-2 sm:mb-5 lg:mb-6 rounded-3xl" src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/7a/82/6e/7a826e57-bc45-a209-793e-a83bb5cd729f/61297547-080b-4c63-995e-c9ea05b0a694_Simulator_Screenshot_-_iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029_-_2023-08-28_at_13.57.35.png/434x0w.webp" alt="" onclick="openModal(this.src)" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Modal -->
+            <div id="myModal" class="modal" onclick="closeModal()">
+              <span class="close cursor">&times;</span>
+              <img class="modal-content" id="img01">
+            </div>
+            
+
 
             <!-- <section id="get-our-app" class="py-10 bg-white sm:py-16 lg:py-24">
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
