@@ -6,60 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Manual</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <div class="relative bg-gradient-to-b from-blue-50 to-blue-100">
-        <header class="">
-            <!-- lg+ -->
-            <div class="relative bg-black">
-                <div class="absolute inset-0">
-                    <img class="object-cover w-full h-full"
-                        src="https://img.freepik.com/free-vector/medical-health-care-modern-banner-bio-tech-research_1017-45510.jpg?t=st=1713612397~exp=1713615997~hmac=5d859f2e86b804f8793079cbfeca17068c7056316eb489ea8c197f31b60267b8&w=1380"
-                        alt="" />
+        <!--  -->
+        <header class="p-3  shadow-xl lg:flex lg:items-center lg:justify-between top-0 w-full z-50 sticky lg:px-22" style="background-image: url('https://img.freepik.com/free-vector/medical-health-care-modern-banner-bio-tech-research_1017-45510.jpg?t=st=1713612397~exp=1713615997~hmac=5d859f2e86b804f8793079cbfeca17068c7056316eb489ea8c197f31b60267b8&w=1380') ;background-size: cover; background-position: center;">
+           
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0">
+                    <a href="#" title="" class="flex">
+                        <img class="w-full h-8 lg:h-14"
+                            src="https://cureselecthealthcare.com/assets/images/cureselect-llp-logo-413x182.jpg"
+                            alt="" />
+                    </a>
                 </div>
-
-                <div class="absolute inset-0 bg-black/30"></div>
-
-                <div class="relative px-4 mx-auto sm:px-6 lg:px-8 sm:py-4">
-                    <nav class="flex items-center justify-between h-16 lg:h-20">
-                        <div class="flex-shrink-0">
-                            <a href="#" title="" class="flex">
-                                <img class="w-full h-8 lg:h-14"
-                                    src="https://cureselecthealthcare.com/assets/images/cureselect-llp-logo-413x182.jpg"
-                                    alt="" />
-                            </a>
-                        </div>
-
-                        <button type="button"
-                            class="inline-flex p-2 text-white transition-all duration-200 rounded-md lg:hidden focus:bg-gray-800 hover:bg-gray-800">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16m-7 6h7" />
-                            </svg>
-                        </button>
-
-                        <div class="hidden lg:flex lg:items-center lg:space-x-10">
-                            <a href="index.html#home" title="" class="text-base font-medium text-white"> Home </a>
-
-                            <a href="#" title="" class="text-base font-medium text-white"> Features </a>
-
-                            <a href="usermanual.html" title="" class="text-base font-medium text-white"> User Manual
-                            </a>
-
-                            <a href="index.html#contact-us" title="" class="text-base font-medium text-white">
-                                Contact-Us </a>
-                        </div>
-
-                        <a href="index.html#get-our-app" title=""
-                            class="items-center justify-center hidden px-6 py-3 text-base font-semibold text-black transition-all duration-200 bg-yellow-400 border border-transparent rounded-full lg:inline-flex hover:bg-yellow-500 focus:bg-yellow-500"
-                            role="button"> Get Our App </a>
-                    </nav>
-                </div>
+                <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
+                   
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
             </div>
-
-
+            
+            <ul class="lg:flex lg:items-center z-[1] lg:z-auto lg:static absolute  w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 bg-gradient-to-l from-blue-300 to-blue-400   bg-opacity-300 lg:bg-transparent lg:bg-none lg:bg-opacity-0">
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="index.html#home" class="text-base font-medium text-black" onclick="scrollToSection('#home')">Home</a>
+                </li>
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="index.html#features" class="text-base font-medium text-black" onclick="scrollToSection('#features')">Features</a>
+                </li>
+                <!-- <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="usermanual.html" class="text-base font-medium text-black" onclick="scrollToSection('#pregnant-mothers')">User Manual</a>
+                </li> -->
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="index.html#our-team" class="text-base font-medium text-black" onclick="scrollToSection('#nurses-doctors')">Our Team</a>
+                </li>
+                
+                <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                    <a href="index.html#contact-us" class="text-base font-medium text-black" onclick="scrollToSection('#blog')">Contact Us</a>
+                </li>
+                <li class="my-4 lg:my-0">
+                    <a href="index.html#get-our-app" class="inline-block">
+                        <button class="items-center justify-center px-6 py-3 text-base font-semibold text-black transition-all duration-200 bg-yellow-400 border border-transparent rounded-full lg:inline-flex hover:bg-yellow-500 focus:bg-yellow-500"
+                            role="button" onclick="scrollToContact()">Get Our App</button>
+                    </a>
+                </li>
+            </ul>
+            
         </header>
         <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
             <div class="px-4 mx-auto sm:px-4  lg:px-8 ">
@@ -546,5 +542,6 @@
         });
     </script>
 </body>
+
 
 </html>

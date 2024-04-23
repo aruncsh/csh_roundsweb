@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSH Rounds</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Include Ionicons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/ionicons/ionicons.min.js"></script>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <div class="relative bg-gradient-to-b from-blue-50 to-blue-100">
-        <header class="sticky">
-            <!-- lg+ -->
+        <!-- <header class="sticky">
+          
             <div class="relative bg-black">
                 <div class="absolute inset-0">
                     <img class="object-cover w-full h-full"
@@ -31,7 +40,7 @@
                             </a>
                         </div>
 
-                        <button type="button"
+                        <button type="button" 
                             class="inline-flex p-2 text-white transition-all duration-200 rounded-md lg:hidden focus:bg-gray-800 hover:bg-gray-800">
                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -48,6 +57,9 @@
                             <a href="usermanual.html" title="" class="text-base font-medium text-white"> User Manual
                             </a>
 
+                            <a href="#our-team" title="" class="text-base font-medium text-white"> Our Team
+                            </a>
+
                             <a href="#" title="" class="text-base font-medium text-white"> Contact-Us </a>
                         </div>
 
@@ -59,7 +71,43 @@
             </div>
 
 
-        </header>
+        </header> -->
+
+        <header class="p-3 shadow-xl lg:flex lg:items-center lg:justify-between top-0 w-full z-50 sticky lg:px-22" style="background-image: url('https://img.freepik.com/free-vector/medical-health-care-modern-banner-bio-tech-research_1017-45510.jpg?t=st=1713612397~exp=1713615997~hmac=5d859f2e86b804f8793079cbfeca17068c7056316eb489ea8c197f31b60267b8&w=1380');background-size: cover; background-position: center;">
+            <div class="flex justify-between items-center">
+              <div class="flex-shrink-0">
+                <a href="#" title="" class="flex">
+                  <img class="w-full h-8 lg:h-14" src="https://cureselecthealthcare.com/assets/images/cureselect-llp-logo-413x182.jpg" alt="" />
+                </a>
+              </div>
+              <span class="text-3xl cursor-pointer mx-2 lg:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+              </span>
+            </div>
+            <ul class="lg:flex lg:items-center z-[1] lg:z-auto lg:static absolute w-full left-0 lg:w-auto lg:py-0 py-4 lg:pl-0 pl-7 lg:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 bg-gradient-to-l from-blue-300 to-blue-400 bg-opacity-300 lg:bg-transparent lg:bg-none lg:bg-opacity-0">
+              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                <a href="#home" class="text-base font-medium text-black" onclick="scrollToSection('#home')">Home</a>
+              </li>
+              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                <a href="#features" class="text-base font-medium text-black" onclick="scrollToSection('#features')">Features</a>
+              </li>
+              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                <a href="usermanual.html" class="text-base font-medium text-black" onclick="scrollToSection('#pregnant-mothers')">User Manual</a>
+              </li>
+              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                <a href="#our-team" class="text-base font-medium text-black" onclick="scrollToSection('#nurses-doctors')">Our Team</a>
+              </li>
+              <li class="mx-4 my-4 lg:my-0 border-r lg:border-none">
+                <a href="#contact-us" class="text-base font-medium text-black" onclick="scrollToSection('#blog')">Contact Us</a>
+              </li>
+              <li class="my-4 lg:my-0">
+                <a href="#get-our-app" class="inline-block">
+                  <button class="items-center justify-center px-6 py-3 text-base font-semibold text-black transition-all duration-200 bg-yellow-400 border border-transparent rounded-full lg:inline-flex hover:bg-yellow-500 focus:bg-yellow-500" role="button" onclick="scrollToContact()">Get Our App</button>
+                </a>
+              </li>
+            </ul>
+          </header>
+
         <div class="bg-gradient-to-b from-blue-50 to-blue-200">
 
 
@@ -314,8 +362,63 @@
                 </div>\
             </section> -->
 
+            <section class="py-10 bg-gray-50 sm:py-16 lg:py-24" id="our-team">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl">Our Leadership Team</h2>
+                    </div>
 
-            <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
+                    <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-4 gap-x-6">
+                        <div class="md:px-4 lg:px-10">
+                            <img class="-rotate-1"
+                                src="https://cureselecthealthcare.com/demo-site/images/team/about-team-easwar.png"
+                                alt="" />
+                            <h2 class="mt-8 text-2xl font-semibold leading-tight text-black">Easwar Sundaram Jr</h2>
+                            <h3 class="mt-4 text-xl font-semibold leading-tight text-black">Co-Founder</h3>
+                            <p class="mt-4 text-base text-gray-600">A successful practicing Neurologist in Texas for 35
+                                years. He is the President of the largest Private Practice Neurology group in North
+                                Texas managing 35+ providers across 2 states.</p>
+                        </div>
+
+                        <div class="md:px-4 lg:px-10">
+                            <img class="-rotate-1"
+                                src="https://cureselecthealthcare.com/demo-site/images/team/about-team-srinath.png"
+                                alt="" />
+                            <h2 class="mt-8 text-2xl font-semibold leading-tight text-black">Dr. Srinath Yeshwanth</h2>
+                            <h3 class="mt-4 text-xl font-semibold leading-tight text-black">Co-Founder</h3>
+                            <p class="mt-4 text-base text-gray-600">A successful entrepreneur and physician with mission
+                                & passion to roll out future enabled, 360 degree end-to-end digital healthcare
+                                solutions.</p>
+                        </div>
+
+                        <div class="md:px-4 lg:px-10">
+                            <img class="rotate-1"
+                                src="https://cureselecthealthcare.com/demo-site/images/team/about-team-prassanna.png"
+                                alt="" />
+                            <h2 class="mt-8 text-2xl font-semibold leading-tight text-black">Prassanna Kumar Ranganthan
+                            </h2>
+                            <h3 class="mt-4 text-xl font-semibold leading-tight text-black">Director & CEO</h3>
+                            <p class="mt-4 text-base text-gray-600">Six Sigma Green Belt certified process and quality
+                                focused senior healthcare revenue cycle consultant with 25+ years of solid hands-on
+                                experience helping mid & large sized physician groups.</p>
+                        </div>
+
+                        <div class="md:px-4 lg:px-10">
+                            <img class="-rotate-1"
+                                src="https://cureselecthealthcare.com/demo-site/images/team/about-team-raman.png"
+                                alt="" />
+                            <h2 class="mt-8 text-2xl font-semibold leading-tight text-black">Mr. Murali Rama</h2>
+                            <h3 class="mt-4 text-xl font-semibold leading-tight text-black">Director & CMO</h3>
+                            <p class="mt-4 text-base text-gray-600">36 Years international corporate executive
+                                experience. He was until 2021 - Director & CMO, Worldwide Software & Systems Channels
+                                Marketing, IBM (a $85B business covering ~160 countries).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="contact-us" class="py-10 bg-gray-100 sm:py-16 lg:py-24">
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div class="max-w-2xl mx-auto text-center">
                         <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">Contact us
@@ -573,64 +676,10 @@
             </section>
 
         </div>
-     
+
 
     </div>
-    <section class="py-10 bg-gradient-to-b from-blue-50 to-blue-200">
-        <h2 class="text-2xl font-bold text-center">Features</h2>
-        <div class="container block md:hidden px-4 mt-4 font-semibold md:font-bold mx-auto">
-            <ul class=" grid grid-cols-1 gap-3 ">
-                <li class="bg-white rounded-md px-1">Create patient admission</li>
-                <li class="bg-white rounded-md px-1">Choose Facility</li>
-                <li class="bg-white rounded-md px-1">Map CPT codes to encounter ICD codes</li>
-                <li class="bg-white rounded-md px-1">Add encounters</li>
-                
-                <li class="bg-white rounded-md px-1">Save and add multiple codes</li>
-                <li class="bg-white rounded-md px-1">Save your favorite codes for quick access</li>
-                <li class="bg-white rounded-md px-1">Discharge patients</li>
-                <li class="bg-white rounded-md px-1">All CPT codes are ported to billing software automatically.</li>
-            </ul>
-        </div>
-        <div class="container hidden md:block flex md:grid md:grid-cols-3 lg:grid-cols-4 gap-2  mx-auto py-20 px-4">
-            
-            <div class="flex group">
-            <img src="img/feature/rehab_15169512.png" class="h-20 w-auto hover:cursor-pointer">
-        <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Create patient admission
-        </h3></div>
-            <div class="flex group">
-            <img src="img/feature/cta_15181756.png" class="h-20 w-auto hover:cursor-pointer">
-        <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Choose Facility </h3></div>
-            <div class="flex group">
-                <img src="img/feature/cryptocurrency_4089405.png" class="h-20 w-auto hover:cursor-pointer">
-                <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Add encounters</h3>
-            </div>
-            <div class="flex group">
-                <img src="img/feature/cryptocurrency_4089405.png" class="h-20 w-auto hover:cursor-pointer">
-                <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Map CPT codes to encounter ICD codes
-                </h3>
-            </div>
-            
-            <div class="flex group">
-                <img src="img/feature/ticket_15308252.png" class="h-28 w-auto hover:cursor-pointer">
-                <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Save and add multiple codes
-                </h3>
-            </div>
-            <div class="flex group">
-                <img src="img/feature/bookmark_15196203.png" class="h-20 w-auto hover:cursor-pointer">
-            <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Save your favorite codes for quick access</h3>
-            </div>
-            <div class="flex group">
-                <img src="img/feature/" class="hover:cursor-pointer">
-                <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">Discharge patients
-                </h3>
-            </div>
-            <div class="flex group">
-                <img src="img/feature/" class="hover:cursor-pointer">
-                <h3 class="opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 font-bold">All CPT codes are ported to billing software automatically.</h3>
-            </div>    
-        </div>
-        
-    </section>
+
 
 </body>
 
